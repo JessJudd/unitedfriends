@@ -30,6 +30,9 @@
    #home-headline-row > .row, #home-headline-row > .row > div {
     height: 850px !important;
   }
+   body.page-template-p-home #home-headline-row > .row, #home-headline-row > .row > div {
+    height: 575px !important;
+  }
 
 }
 

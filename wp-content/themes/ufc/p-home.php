@@ -60,7 +60,33 @@
 			</div>
 		</div>
 	</div>
+	
+<?  $notice_headline = get_field('notice_headline');
+	$notice_blurb = get_field('notice_blurb');
+	$notice_url = get_field('button_url');
+	$notice_button = get_field('button_text');
+	$get_notice_target = get_field('button_target');
+	$notice_target = ($get_notice_target == 1 ? 'target="_blank"' : '');
 
+	if($notice_headline): ?>
+	<div id="notice" class="headline-row">
+		<div class="row">
+			<div class="c12">
+				<div class="valign-middle">
+					<div class="text-center">
+						<h2 class="size7 margin-bot20"><?php echo $notice_headline; ?></h2>
+						<div class="size5 margin-bot30 copy">
+							<p><?php echo $notice_blurb; ?></p>
+						</div>
+						<a class="btn btn-blue" <?php if($notice_target){echo $notice_target;} ?> href="<?php echo $notice_url; ?>"><?php echo $notice_button; ?></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?	endif; ?>
+	
+	
 	<div id="home-row2" class="headline-row">
 	<div class="row bg-cover bg-shaded js-even-columns white" style="background-position: 20% center;background-image:url(<? bloginfo('template_url'); ?>/images/content/home-2.jpg);min-height:409px">
 
