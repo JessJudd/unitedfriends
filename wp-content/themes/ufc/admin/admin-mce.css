@@ -1,0 +1,8 @@
+@import url('../style.css');
+
+body {
+	border-top: 0 !important;
+	margin: 10px !important;
+	background: #ffffff !important;
+	height: calc(100% - 20px);
+}
