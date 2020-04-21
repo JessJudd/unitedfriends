@@ -73,6 +73,34 @@ function _custom_post_types() {
           'with_front' => false        
      ));
 
+     $covid_labels = array(
+          'name' => __( 'COVID-19' ),
+          'singular_name' => __( 'Resource' ),
+          'add_new' => __( 'Add New' ),
+          'add_new_item' => __( 'Add New Resource' ),
+          'edit' => __( 'Edit' ),
+          'edit_item' => __( 'Edit Resource' ),
+          'new_item' => __( 'New COVID-19 Resource' ),
+          'view' => __( 'View' ),
+          'view_item' => __( 'View Resource' ),
+          'search_items' => __( 'Search COVID-19 Resources' ),
+          'not_found' => __( 'No COVID-19 Resources found' ),
+          'not_found_in_trash' => __( 'No COVID-19 Resources found in Trash' ),
+          'parent' => __( 'Parent Resource' ),
+     );
+
+     register_post_type('covid-19', array(
+          'label' => __('COVID-19'),
+          //'labels' => _custom_post_type_labels('Resource','COVID-19'),
+          'labels' => $covid_labels,
+          'public' => true,
+          'has_archive' => true,
+          'hierarchical' => true,          
+          'supports' => array('title','editor'),
+          'rewrite' => array('slug'=>'covid-resource'),
+          'with_front' => false,
+          'show_in_menu' => true      
+     ));
 
      flush_rewrite_rules();
 }
