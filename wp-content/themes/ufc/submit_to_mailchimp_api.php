@@ -9,7 +9,11 @@ $list_id = ( isset( $_GET["list"] ) && $_GET["list"] != '' ) ? $_GET["list"] : g
 $merge_fields = array(
     'FNAME' => $_GET["firstname"] ? $_GET["firstname"] : '',
     'LNAME' => $_GET["lastname"] ? $_GET["lastname"] : '',
-    'PHONE' => $_GET["phone"] ? $_GET["phone"] : ''
+    'MMERGE10' => $_GET["phone"] ? $_GET["phone"] : '',
+    'MMERGE6' => $_GET["address"] ? $_GET["address"] : '',
+    'MMERGE7' => $_GET["city"] ? $_GET["city"] : '',
+    'MMERGE8' => $_GET["state"] ? $_GET["state"] : '',
+    'MMERGE9' => $_GET["zip"] ? $_GET["zip"] : '',
 );
 
 // set list & API key

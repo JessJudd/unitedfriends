@@ -37,32 +37,37 @@
 		</div>
 	</div>
 
-	<div class="row">
+	<?php 
+	$hideCharts = get_field('content_1_1_hide');
+	if($hideCharts != true) { ?>
+		<div class="row">
 
-		<div class="c12">
+			<div class="c12">
 
-			<div class="size7 margin-top90 margin-bot40 text-center"><? the_field('content_1_1_headline'); ?></div>
+				<div class="size7 margin-top90 margin-bot40 text-center"><? the_field('content_1_1_headline'); ?></div>
 
-			<div class="content margin-bot60">
-				<? the_field('content_1_1_body'); ?>
+				<div class="content margin-bot60">
+					<? the_field('content_1_1_body'); ?>
+				</div>
+
 			</div>
-
 		</div>
-	</div>
-
 
 	<div id="financials-pies" class="row text-center js-even-columns">
+		<div class="c2 emptycol"></div>
 		<div class="c4 margin-bot60">
-			<img src="http://www.unitedfriends.org/wp-content/uploads/2018/04/financials-pie-revenue.png" height="250" class=""/>				
+			<img src="<? the_field('content_1_1_img1'); ?>" height="250" />
 		</div>
 
 		<div class="c4 margin-bot60">
-			<img src="http://www.unitedfriends.org/wp-content/uploads/2018/04/financials-pie-expenses.png"  height="250" class=""/>
+			<img src="<? the_field('content_1_1_img2'); ?>" height="250" />
 		</div>
-</div>
+		<div class="c2 emptycol"></div>
+	</div>
+	<?php } ?>
 	<div class="row">
 		<div class="c12">
-			<div class="content margin-bot40">
+			<div class="content margin-top90 margin-bot40">
 
 				<div class="size7 margin-bot40 text-center"><? the_field('content_1_2_headline'); ?></div>
 
@@ -72,20 +77,23 @@
 		</div>
 	</div>
 
-	<div class="row">
-		<div class="c2 emptycol"></div>
-		<div class="c8 margin-bot60">
-			<?	if($pdfs = get_field('content_1_2_pdfs')):
-					echo '<ul class="menu flexmenu text-center">';
-					foreach($pdfs as $pdf):
-						if($pdf['pdf'])
-							echo "<li><a target='_blank' class='btn btn-green btn-size2' href='".$pdf['pdf']['url']."'>".$pdf['title']."</a></li>";
-					endforeach;
-					echo '</ul>';
-				endif;				
-			?>			
+	<div class="row" id="financePdfs">
+		<!-- <div class="c3 emptycol"></div> -->
+		<div class="c12">
+			<div class="content">
+				<div class="row">
+					<div class="c6 margin-bot30 text-center">
+						<div class="financeHeader size6 margin-bot20 text-center">Form 990</div>
+						<?	ufc_buttons(get_field('content_1_2_990_pdfs')); ?>
+					</div>
+					<div class="c6 margin-bot30 text-center">
+						<div class="financeHeader size6 margin-bot20 text-center">Audited Financials</div>
+						<?	ufc_buttons(get_field('content_1_2_af_pdfs')); ?>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="c2 emptycol"></div>
+		<!-- <div class="c3 emptycol"></div> -->
 	</div>
 
 	<div class="row">
@@ -102,7 +110,7 @@
 
 	<div class="row">
 
-		<div class="c2 emptycol"></div>
+		<div class="c3 emptycol"></div>
 
 		<div class="c6 margin-bot120">
 			<?	if($companies = get_field('content_1_3_companies')):
@@ -121,7 +129,7 @@
 			<div class="size1"><? the_field('content_1_3_blurb'); ?></div>			
 		</div>
 
-		<div class="c2 emptycol"></div>
+		<div class="c3 emptycol"></div>
 
 	</div>
 

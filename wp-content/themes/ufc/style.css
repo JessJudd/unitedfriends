@@ -792,6 +792,13 @@ input[type=submit] {
 	color: #3a3a3a;
 }
 
+.gform_wrapper select {
+	border: 2px solid #3a3a3a;	
+	color: #3a3a3a;
+	padding: 7px 6px !important;
+	border-radius: 3px;	
+}
+
 .gform_wrapper .ginput_container {
 	margin-top: 20px;
 }
@@ -844,6 +851,22 @@ input[type=submit] {
 	display: inline-block;
 }
 
+.gform_confirmation_wrapper {
+	margin-top: 2em;
+}
+
+.gform_confirmation_message {
+	font-size: 1.666em;
+	line-height: 1.125em;
+	font-weight: 700;
+	color: #0065b1;
+}
+
+@media only screen and (max-width:640px){
+	.gform_wrapper select {
+		padding: 13px 6px !important;
+	}
+}
 
 /* header */
 
@@ -1128,6 +1151,9 @@ body:not(.menu-visible) #nav {
 	position: relative;
 	height: 44px;
 }
+.mc_embed_signup.mc_embed_signup--page {
+	height: auto;
+}
 
 .mc_embed_signup.mc_embed_signup--footer {
 	margin-bottom: 36px;
@@ -1177,6 +1203,58 @@ body:not(.menu-visible) #nav {
 	display: flex;
 }
 
+.mc-field-error {
+	display: none;
+	color: #cc0000;
+	font-size: .777em;
+}
+.mc-field-group--error .mc-field-error {
+	display: block;
+}
+
+/* PAGE FORM */
+.mc-embedded-subscribe-form--page  {
+	background-color: #ffffff;
+	padding: 40px;
+}
+.mc-embedded-subscribe-form--page .mc-fields {
+	flex-wrap: wrap;
+}
+
+.mc-embedded-subscribe-form--page .mc-field-group {
+	width: 100%;
+	margin-bottom: 18px;
+}
+.mc-embedded-subscribe-form--page .mc-field-group:last-child {
+	margin-bottom: 0
+}
+.mc_embed_signup.mc_embed_signup--page label {
+    font-size: 16px;
+    color: rgb(101, 101, 101);
+    word-break: break-word;
+    word-break: normal;
+}
+
+.mc_embed_signup.mc_embed_signup--page input[type="submit"] {
+	margin-left: 0;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.mc_embed_signup.mc_embed_signup--page input[type="text"], .mc_embed_signup.mc_embed_signup--page input[type="email"], .mc_embed_signup.mc_embed_signup--page select {
+	width: 100%;
+	border: 1px solid #dbdbdb;
+	border-radius: 3px;
+}
+.mc_embed_signup.mc_embed_signup--page select {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 13px 10px;
+	color: #767676;
+}
+
+
 .mc-embedded-subscribe-form .mc-fields .mc-fields-column {
 	position: relative;
 }
@@ -1187,9 +1265,17 @@ body:not(.menu-visible) #nav {
 
 .mc-embedded-subscribe-form.mc-embedded-subscribe-form--success .mc-feedback {
 	display: block;
+
+}
+
+.mc-embedded-subscribe-form.mc-embedded-subscribe-form--success .mc-feedback .mc-feedback-heading {
 	color: #c2cc38;
 	font-size: 1.333em;
 	padding-top: 0.25em;
+}
+.mc-embedded-subscribe-form.mc-embedded-subscribe-form--success .mc-feedback .mc-feedback-content {
+	font-size: 1em;
+	padding-top: 0.5em;
 }
 
 .mc-embedded-subscribe-form .mc-error {
@@ -1967,5 +2053,29 @@ blockquote + .wp-caption-text {
 	}
 	#leftGrid .c6:last-of-type {
 		order: 1;
+	}
+}/* Financials */
+#financePdfs .menu > li {
+	display:block;
+	margin: 0;
+	text-align:center;
+}
+#financePdfs .menu > li .btn {
+	min-width:200px;
+}
+@media screen and (max-width:480px){
+	#financePdfs .menu > li .btn {
+		min-width:240px;
+	}
+}
+@media screen and (max-width:960px){
+	#financePdfs ul.menu {
+		margin-bottom: 20px;
+	}
+}
+@media screen and (min-width:760px) and (max-width:960px){
+	#financePdfs .row .c4 {
+		padding:0;
+		width:33%;
 	}
 }

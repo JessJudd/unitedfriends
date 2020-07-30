@@ -20,7 +20,7 @@
 
 	<?	global $post;
 
-		$ver = rand(); 
+		$ver = 5; 
 
 		// STYLES		
 		wp_enqueue_style('style', get_bloginfo('template_url').'/style.css', array(), $ver); 
@@ -44,15 +44,30 @@
     
 	<? wp_head(); ?>
 
+	<!-- Facebook Pixel Code -->
+	<script type='text/javascript'>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '660550378033145', {}, {"agent": "wordpress-5.3.2-2.0.2"});
+	fbq('track', 'PageView', []);
+	</script>
+	<noscript>
+	<img height="1" width="1" style="display:none" alt="fbpx"
+	src="https://www.facebook.com/tr?id=660550378033145&ev=PageView&noscript=1" />
+	</noscript>
+	<!-- End Facebook Pixel Code -->
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158818452-1"></script>
 	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
-	  ga('create', 'UA-158818452-1', 'auto');
-	  ga('send', 'pageview');
-
+	  gtag('config', 'UA-158818452-1');
 	</script>
 
 </head>
@@ -72,7 +87,9 @@
 					<div class="c12">
 						<a id="mobile-menu-button"></a>
 						<h1 id="logo" class="left"><a href="<? bloginfo('url'); ?>"><img class="nostretch" src="<? bloginfo('template_url'); ?>/images/logo-text-2x.png" title="United Friends of the Children"/></a></h1>
+						<? if( !is_page_template('p-donate.php') ): ?>
 						<a id="header-donate" class="btn btn-blue right" href="<? bloginfo('url'); ?>/donate">Donate</a>
+						<? endif; ?>
 					</div>
 				</div>
 			</div>
