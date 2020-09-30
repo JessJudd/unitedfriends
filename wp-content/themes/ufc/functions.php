@@ -22,6 +22,8 @@ register_nav_menu('main-nav','Main Navigation');
 register_nav_menu('second-nav','Second Navigation');
 register_nav_menu('footer-nav','Footer Navigation');
 
+// ACF
+require_once( __DIR__ . '/acf/acf.php');
 
 // ACF OPTIONS PAGES
 if(function_exists("register_options_page")) {

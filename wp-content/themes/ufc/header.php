@@ -10,17 +10,27 @@
 
 	<link rel="shortcut icon" href="<? bloginfo('url'); ?>/favicon.ico"  type="image/x-icon"  />
 
+	<!-- Fundraise Up -->
+	<script>(function(w,d,s,n,a){if(!w[n]){var l='call,catch,on,once,set,then,track'
+	.split(','),i,o=function(n){return'function'==typeof n?o.l.push([arguments])&&o
+	:function(){return o.l.push([n,arguments])&&o}},t=d.getElementsByTagName(s)[0],
+	j=d.createElement(s);j.async=!0;j.src='https://cdn.fundraiseup.com/widget/'+a;
+	t.parentNode.insertBefore(j,t);o.s=Date.now();o.v=4;o.h=w.location.href;o.l=[];
+	for(i=0;i<7;i++)o[l[i]]=o(l[i]);w[n]=o}
+	})(window,document,'script','FundraiseUp','AMJPVQGK');</script>
+	<!-- End Fundraise Up -->
+
 	<title><?	
 				wp_title(' - ',true,'right');
 	?>United Friends of the Children | Housing, Education, &amp; Resources for Foster Youth in Southern California</title>
 
-
+	<script src="https://use.fontawesome.com/6cea28aa5d.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,300,700' rel='stylesheet' type='text/css'>
 
 
 	<?	global $post;
 
-		$ver = 5; 
+		$ver = 4324324; 
 
 		// STYLES		
 		wp_enqueue_style('style', get_bloginfo('template_url').'/style.css', array(), $ver); 
@@ -32,6 +42,7 @@
 		wp_enqueue_script('cycle2', get_bloginfo('template_url').'/js/jquery.cycle2.min.js', array('jquery'), $ver);
 		wp_enqueue_script('fittext', get_bloginfo('template_url').'/js/jquery.fittext.js', array('jquery'), $ver);
 		wp_enqueue_script('insta', get_bloginfo('template_url').'/js/insta.js', array(), $ver);
+		wp_enqueue_script('scripts', get_bloginfo('template_url').'/js/scripts.js', array(), $ver);
 		wp_enqueue_script('actions', get_bloginfo('template_url').'/js/actions.js', array('jquery','insta','waypoints','fittext'), $ver);
 		wp_enqueue_script('mailchimp', get_bloginfo('template_url').'/js/mailchimp-submit.js', array('jquery'), $ver);
 		
@@ -40,35 +51,27 @@
 			$body_classes .= "overlay-header";
 
 		$body_classes .= " header-alert-active";
+
+		if(is_page_template('page-donate2020.php')){
+			echo '<!-- IS Donate Page -->';
+			$hideDonate = get_field('hide_donate_button');
+			if($hideDonate == 1){
+				$body_classes .= ' hide_donate_header';
+			}
+		}
 	?>
     
 	<? wp_head(); ?>
 
-	<!-- Facebook Pixel Code -->
-	<script type='text/javascript'>
-	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-	document,'script','https://connect.facebook.net/en_US/fbevents.js');
-	fbq('init', '660550378033145', {}, {"agent": "wordpress-5.3.2-2.0.2"});
-	fbq('track', 'PageView', []);
-	</script>
-	<noscript>
-	<img height="1" width="1" style="display:none" alt="fbpx"
-	src="https://www.facebook.com/tr?id=660550378033145&ev=PageView&noscript=1" />
-	</noscript>
-	<!-- End Facebook Pixel Code -->
-	
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158818452-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158818452-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-	  gtag('config', 'UA-158818452-1');
-	</script>
+  gtag('config', 'UA-158818452-1');
+</script>
 
 </head>
 
@@ -84,12 +87,22 @@
 
 			<div class="grid">
 				<div class="row">
-					<div class="c12">
+					<!--<div class="c12">
 						<a id="mobile-menu-button"></a>
 						<h1 id="logo" class="left"><a href="<? bloginfo('url'); ?>"><img class="nostretch" src="<? bloginfo('template_url'); ?>/images/logo-text-2x.png" title="United Friends of the Children"/></a></h1>
 						<? if( !is_page_template('p-donate.php') ): ?>
 						<a id="header-donate" class="btn btn-blue right" href="<? bloginfo('url'); ?>/donate">Donate</a>
+						<a href="#FUNPVKWUMEC&type=button&align=center&color=2077d4&size=45" style="display: none">Donate</a>
 						<? endif; ?>
+					</div>-->
+					<div class="c11">
+						<a id="mobile-menu-button"></a>
+						<h1 id="logo" class="left"><a href="<? bloginfo('url'); ?>"><img class="nostretch" src="<? bloginfo('template_url'); ?>/images/logo-text-2x.png" title="United Friends of the Children"/></a></h1>
+					</div>
+					<div class="c1">
+						<? if( !is_page_template('p-donate.php') ): ?>
+						<a id="header-donate" class="btn btn-blue right" href="<? bloginfo('url'); ?>/donate">Donate</a>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>
