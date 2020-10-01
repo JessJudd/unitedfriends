@@ -93,7 +93,7 @@
     </div>
     <?php if ($subhero__headline){
 
-        $fundraiseMe = '<a href="#FUNPVKWUMEC&type=button&align=center&color=0065B1&size=45" style="display: none">'.$subhero_button_text.'</a>';
+        $fundraiseMe = '<a href="#XZEYHGVR" style="display: none">'.$subhero_button_text.'</a>';
         $defaultButton = $subhero__button_url != '' ? '<a href="'.$subhero__button_url.'" class="btn btn-blue" target="'.$subhero__button_target .'">'.$subhero__button_text.'</a>' : '';
         $button = ($get_button_type == 1) ? $fundraiseMe : $defaultButton ;
         $subhero = '
