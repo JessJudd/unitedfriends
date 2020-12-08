@@ -2784,6 +2784,48 @@ label.home__icons--toggle:after {
 #home__subhero.about2020 #home__subhero--content p {
 	margin-bottom:0;
 }
+
+.about__video {
+	padding: 40px 0;
+	text-align: center;
+}
+.about__video .video--inner {
+	align-items:center;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	min-height: 255px;
+	margin: 0 auto;
+	max-width: 700px;
+	position:relative;
+}
+.about__video .video--wrapper {
+	height:30vh;
+	max-height: 394px;
+	width: 100%;
+}
+.about__video .video--wrapper iframe {
+	display:block;
+	height:100%;
+	width:100%;
+}
+@media screen and (min-width:768px){
+	.about__video {
+		padding: 60px 0;
+	}
+	.about__video .video--inner {
+		height:500px;
+	}
+	.about__video .video--wrapper {
+		max-width: 700px;
+		height: 394px;
+	}
+	.about__video .video--wrapper iframe {
+		height: 100%;
+	}
+}
+
+
 #featured-wrapper,
 .about__history .row,
 .about__featured .row,

@@ -98,10 +98,32 @@ if( function_exists('acf_add_local_field_group') ):
                 ),
             ),
 
+            /* Section 2 - Video */
+            array(
+                'key' => 'about2020__video__tab',
+                'label' => 'Section 2',
+                'type' => 'tab',
+            ),
+            array(
+                'key' => 'about2020__video__headline',
+                'label' => 'Video Section Headline',
+                'name' => 'video_headline',
+                'type' => 'text',
+                'default_value' => 'The United Friends Impact',
+                'required' => 1,
+            ),
+            array(
+                'key' => 'about2020__video__embed',
+                'label' => 'Video URL',
+                'name' => 'video_embed',
+                'type' => 'url',
+                'required' => 1,
+            ),
+
             /* Section 2 */
             array(
                 'key' => 'about2020__s2__tab',
-                'label' => 'Section 2',
+                'label' => 'Section 3',
                 'type' => 'tab',
             ),
             array(
@@ -154,7 +176,7 @@ if( function_exists('acf_add_local_field_group') ):
             /* Section 3 */
             array(
                 'key' => 'about2020__s3__tab',
-                'label' => 'Section 3',
+                'label' => 'Section 4',
                 'type' => 'tab',
             ),
             array(
@@ -265,7 +287,7 @@ if( function_exists('acf_add_local_field_group') ):
             /* Section 4 */
             array(
                 'key' => 'about2020__s4__tab',
-                'label' => 'Section 4',
+                'label' => 'Section 5',
                 'type' => 'tab',
             ),
             array(

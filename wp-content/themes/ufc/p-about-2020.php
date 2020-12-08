@@ -18,6 +18,11 @@
 
     $s1__headline = get_field('s1_headline');
 
+    $video__headline = get_field('video_headline');
+    $video__thumb = get_field('video_img');
+    $video__url = get_field('video_embed');
+    $vimeo__id = ltrim($video__url, 'https://vimeo.com/');
+
     $s2__headline = get_field('s2_headline');
     $s2__img = get_field('s2_image_d');
     $s2__copy = get_field('s2_copy');
@@ -61,6 +66,9 @@
 
 
     $css = '<style type="text/css">
+    .about__video .video--wrapper #trigger {
+        background-image:url('. $video__thumb .')!important;
+    }
     @media screen and (min-width:769px){
         #home__hero {
             background-image:url('. $hero__img__d .')!important;
@@ -126,6 +134,21 @@
     <?php
     endif;
     ?>
+
+    <?php
+        if( $video__headline ) :
+    ?>
+        <div class="about__video row" style="background-color:#5C0F40;">
+            <div class="c12">
+                <div class="video--inner">
+                    <h3 class="size10 bold margin-bot20 white"><?php echo $video__headline; ?></h3>
+                    <div class="video--wrapper">
+                        <iframe id="vimeo" src="https://player.vimeo.com/video/<?php echo $vimeo__id; ?>" width="700" height="394" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
 
     <?php
         if( $s2__headline ) :
@@ -256,5 +279,18 @@
     </div>
     <?php endif; ?>
 </div>
+
+<script>
+    var trigger = jQuery('#trigger');
+    var hidden = jQuery('#hidden');
+    var vimeo = jQuery('#vimeo')
+
+    vimeo.click(function() {
+        console.log('hide placeholder, show video');
+        trigger.addClass('off');
+        // hidden.addClass('reveal');
+        // vimeo.contents().find(selector).click();
+    });
+</script>
 
 <?	get_footer(); 	?>
