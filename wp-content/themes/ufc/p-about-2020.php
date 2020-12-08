@@ -136,7 +136,7 @@
     ?>
 
     <?php
-        if( $video__headline ) :
+        if( $vimeo__id ) :
     ?>
         <div class="about__video row" style="background-color:#5C0F40;">
             <div class="c12">
