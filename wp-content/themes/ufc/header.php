@@ -33,7 +33,7 @@
 		$ver = 4324324; 
 
 		// STYLES		
-		wp_enqueue_style('style', get_bloginfo('template_url').'/style.css', array(), $ver); 
+		wp_enqueue_style('style', get_bloginfo('template_url').'/style.css', filemtime(get_bloginfo('template_url').'/style.css'), $ver); 
 		wp_enqueue_style('responsive', get_bloginfo('template_url').'/css/responsive.css', array('style'), $ver); 
 
 		// SCRIPTS
