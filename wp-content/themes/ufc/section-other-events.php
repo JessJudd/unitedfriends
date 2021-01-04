@@ -1,6 +1,6 @@
 <div class="c6 bg-white">
 	<div class="half-box margin-top90 margin-bot90">
-		<div class="size7 margin-bot10">Past Events</div>
+		<div class="size7 margin-bot10">Other Events</div>
 		<ul class="vmenu vborder other-events-menu">
 		<?	if($other_events = get_posts(array('cat'=>array(4),'post_status'=>'publish','posts_per_page'=>3,'orderby'=>'post_date','order'=>'desc'))) : 
 				foreach($other_events as $event) :

@@ -24,8 +24,8 @@
 				wp_title(' - ',true,'right');
 	?>United Friends of the Children | Housing, Education, &amp; Resources for Foster Youth in Southern California</title>
 
-	<script src="https://use.fontawesome.com/6cea28aa5d.js"></script>
-	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,300,700' rel='stylesheet' type='text/css'>
+	<script src="https://kit.fontawesome.com/edb5dd074e.js" crossorigin="anonymous"></script>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,300,700,900' rel='stylesheet' type='text/css'>
 
 
 	<?	global $post;

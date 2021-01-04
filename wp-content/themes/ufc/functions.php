@@ -33,13 +33,12 @@ if(function_exists("register_options_page")) {
     register_options_page('MailChimp');  
 }
 
-// IMAGE SIZES
+function brandKnew__styles() { 
+    // wp_enqueue_style('mytheme_main_style', get_stylesheet_uri()); 
+    wp_enqueue_style('bk_ufc_main_style', get_theme_file_uri('dist/main.css')); 
+} 
 
-//		X, X		// LARGE
-//		X, X		// MEDIUM
-//		X, X		// THUMBNAIL	
-
-// add_image_size('' ,				,	,	false);		// WHERE
+add_action('wp_enqueue_scripts', 'brandKnew__styles');
 
 
 function ufc_excerpt($ID,$length) {

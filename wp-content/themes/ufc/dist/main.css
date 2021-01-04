@@ -1,0 +1,279 @@
+.content__full .content__full--inner {
+  padding: 35px 20px 40px;
+}
+.content__full .content__full--inner .content__full--content .content__full--title {
+  font-size: 35px;
+  font-weight: 900;
+  line-height: 36px;
+  margin-bottom: 15px;
+}
+.content__full .content__full--inner .content__full--content .content__full--p {
+  font-size: 16px;
+  line-height: 24px;
+}
+.content__full .content__full--inner .content__full--content .content__full--p.large {
+  font-size: 23px;
+  line-height: 30px;
+}
+.content__full .content__full--inner .content__full--content .btn {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .content__full .content__full--inner .content__full--content {
+    margin: 0 auto;
+    max-width: 825px;
+  }
+  .content__full .content__full--inner .content__full--content .content__full--title {
+    font-size: 52px;
+    line-height: 52px;
+  }
+}
+
+.quote_img {
+  display: flex;
+  flex-direction: column;
+}
+.quote_img .quote_img--content {
+  background-color: #F1F2F2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.quote_img .quote_img--inner {
+  padding: 30px 20px 55px;
+}
+@media screen and (min-width: 1024px) {
+  .quote_img .quote_img--inner {
+    padding: 0;
+  }
+}
+.quote_img .quote_img--inner h3 {
+  color: #BFCD2F;
+}
+.quote_img .quote_img--bg {
+  background-size: cover;
+  background-position: center;
+  height: 250px !important;
+}
+@media screen and (min-width: 540px) {
+  .quote_img .quote_img--bg {
+    height: 320px !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .quote_img .quote_img--bg {
+    background-position: left;
+    height: 450px !important;
+  }
+}
+.quote_img .quote_img--copy {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .quote_img {
+    flex-direction: row;
+  }
+  .quote_img--inner {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+}
+.title__description .title__description--inner {
+  padding: 45px 25px 35px;
+}
+@media screen and (min-width: 768px) {
+  .title__description .title__description--inner {
+    margin: 0 auto;
+    max-width: 825px;
+  }
+}
+.title__description .title__description--inner .title__description--header {
+  font-weight: 900;
+}
+.title__description .title__description--inner .title__description--copy {
+  font-size: 19px;
+  line-height: 22px;
+}
+
+.list_columns {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  .list_columns {
+    flex-direction: row;
+  }
+}
+.list_columns .list_columns--col {
+  background-color: #F1F2F2;
+  padding: 35px 25px 40px;
+}
+.list_columns .list_columns--col--gutter {
+  background-color: transparent;
+  height: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .list_columns .list_columns--col--gutter {
+    height: 100%;
+    width: 20px;
+  }
+}
+.list_columns .list_columns--col .list_columns--blurb {
+  max-width: 560px;
+}
+.list_columns .list_columns--col .list_columns--title {
+  color: #0164AF;
+  font-size: 35px;
+  line-height: 38px;
+}
+.list_columns .list_columns--col .list_columns--list {
+  margin-bottom: 30px;
+  padding: 0;
+}
+.list_columns .list_columns--col .list_columns--list-item {
+  display: flex;
+  font-weight: bold;
+  list-style-type: none;
+  margin-bottom: 15px;
+}
+.list_columns .list_columns--col .list_columns--list-item i.fa-check {
+  color: #0164AF;
+  display: inline-block;
+  padding-top: 5px;
+  padding-right: 15px;
+}
+
+.chart_w_captions {
+  padding-top: 50px;
+}
+.chart_w_captions--single {
+  padding: 0 40px 50px;
+}
+.chart_w_captions--single .chart__img {
+  display: block;
+  margin: 0 auto;
+  max-width: 140px;
+  width: 100%;
+}
+.chart_w_captions--single .chart__value {
+  color: #70BAE3;
+  display: block;
+  font-weight: 900;
+  margin: 12px 0;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.hero__main {
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: relative;
+}
+.hero__main--inner {
+  background: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .hero__main--inner {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .hero__main--inner:after {
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0.75;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+  .hero__main--inner * {
+    z-index: 2;
+    position: relative;
+  }
+  .hero__main--inner .emptycol {
+    z-index: 0;
+  }
+}
+.hero__main--inner .hero__main--img {
+  min-height: 300px;
+}
+@media screen and (min-width: 768px) {
+  .hero__main--inner .hero__main--img {
+    display: none;
+  }
+}
+.hero__main--inner .hero__main--headline {
+  font-weight: 900;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .hero__main--inner .hero__main--headline {
+    margin-bottom: 25px;
+  }
+}
+.hero__main--inner .hero__main--content {
+  padding: 30px 20px;
+}
+@media screen and (min-width: 768px) {
+  .hero__main--inner .hero__main--content {
+    background-color: transparent;
+  }
+}
+
+.subhero__simple .subhero__simple--inner .subhero__simple--content {
+  margin: 0 auto;
+  max-width: 824px;
+  padding: 30px 0 40px;
+}
+.subhero__simple .subhero__simple--inner .subhero__simple--content p {
+  font-size: 21px;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .subhero__simple .subhero__simple--inner .subhero__simple--content p {
+    margin-bottom: 0;
+  }
+}
+
+.max {
+  margin: 0 auto;
+}
+.max-1260 {
+  max-width: 1260px;
+}
+
+/* new programs 2020 */
+#programs__hero.hero__main {
+  background-size: 100%;
+  height: 495px;
+}
+@media screen and (min-width: 768px) {
+  #programs__hero.hero__main {
+    height: 575px;
+  }
+}
+
+body.page-template-p-programs-2020-php,
+body.page-template-p-about-2020-php {
+  background-color: #fff;
+}
