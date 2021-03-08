@@ -125,7 +125,7 @@ if( function_exists('acf_add_local_field_group') ):
                 'type' => 'text',
             ),
             array(
-                'key' => 'about2020__s2button_target',
+                'key' => 'about2020__cta__button_target',
                 'label' => 'Button Target',
                 'name' => 'cta_button_target',
                 'type' => 'true_false',

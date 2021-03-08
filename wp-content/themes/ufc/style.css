@@ -2790,6 +2790,10 @@ label.home__icons--toggle:after {
 	padding-top:32px;
 	padding-bottom:40px;
 }
+.about__cta .margin-medium.top {
+	margin-bottom: 0;
+	margin-top: 21px;
+}
 @media screen and (min-width:1024px){
 	.about__cta {
 		padding-top:76px;

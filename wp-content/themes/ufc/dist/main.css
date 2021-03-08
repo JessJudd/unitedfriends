@@ -28,6 +28,12 @@
     line-height: 52px;
   }
 }
+.content__full__links {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 .quote_img {
   display: flex;
@@ -164,6 +170,57 @@
   margin: 12px 0;
 }
 
+.location {
+  margin-bottom: 25px;
+}
+.location__desc {
+  margin-bottom: 10px;
+}
+.location__info {
+  margin-bottom: 5px;
+}
+
+.resources {
+  background-color: #F1F2F2;
+  padding: 24px 20px;
+}
+@media screen and (min-width: 1024px) {
+  .resources {
+    padding: 40px 50px;
+  }
+}
+.resources__list {
+  margin: 0;
+  padding: 0;
+}
+.resources__list li {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .resources__list li {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.resources__list li span {
+  display: block;
+  font-weight: normal;
+  text-align: left;
+}
+@media screen and (min-width: 1024px) {
+  .resources__list li span {
+    display: inline-block;
+    min-width: 125px;
+  }
+}
+.resources__title {
+  margin-bottom: 18px;
+}
+
 .font-bold {
   font-weight: bold;
 }
@@ -255,11 +312,84 @@
   }
 }
 
+.bg-ruby {
+  background-color: #D3145A;
+}
+.bg-grey {
+  background-color: #F1F2F2;
+}
+.bg-olive {
+  background-color: #BFCD2F;
+}
+
+.divider__img {
+  background-size: cover;
+  background-position: center top;
+  height: inherit;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.layout__bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+.layout__two .inner {
+  padding: 35px 0;
+}
+.layout__two .inner h3.title {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .layout__two .inner {
+    padding: 55px 0;
+  }
+}
+
+.margin-medium {
+  margin-bottom: 21px;
+}
+.margin-medium.top {
+  margin-bottom: 0;
+  margin-top: 21px;
+}
+.margin-none {
+  margin-bottom: 0;
+}
+.margin-xlarge {
+  margin-bottom: 42px;
+}
+.margin-50 {
+  margin-bottom: 50px;
+}
+
 .max {
   margin: 0 auto;
 }
+.max-default {
+  max-width: 824px;
+}
+.max-550 {
+  max-width: 550px;
+}
+.max-770 {
+  max-width: 770px;
+}
+.max-1030 {
+  max-width: 1030px;
+}
 .max-1260 {
   max-width: 1260px;
+}
+
+.padding-medium {
+  padding: 21px 0;
 }
 
 /* new programs 2020 */
@@ -276,4 +406,114 @@
 body.page-template-p-programs-2020-php,
 body.page-template-p-about-2020-php {
   background-color: #fff;
+}
+
+#services__emergency.row .row .c6 {
+  padding: 0;
+}
+#services__hero.hero__main {
+  height: 300px;
+}
+@media screen and (min-width: 1024px) {
+  #services__hero.hero__main {
+    height: 574px;
+  }
+}
+#services__hero--inner {
+  align-items: center;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+#services__subhero .subhero__simple--content p {
+  margin-bottom: 0;
+}
+
+.services.divider {
+  height: 250px;
+}
+@media screen and (min-width: 1024px) {
+  .services.divider {
+    height: 462px;
+  }
+  .services.divider .divider__img:first-of-type {
+    background-position: 50% 20%;
+  }
+  .services.divider .divider__img:nth-of-type(2) {
+    background-position: 50%;
+  }
+}
+.services.icon {
+  margin-bottom: 30px;
+}
+.services.icon .icon__img {
+  display: block;
+  height: 130px;
+  margin: 0 auto 15px;
+  width: 130px;
+}
+.services.row.layout__one .c12 {
+  padding: 0;
+}
+.services.row.layout__one .c12 .inner {
+  padding: 35px 20px 0;
+}
+.services.row.layout__two {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.services.row.layout__two.js-even-columns .c6 {
+  padding: 0;
+}
+.services.row.layout__two.js-even-columns .c6 .layout__bg {
+  height: 2 17px !important;
+}
+
+ul.styled-list li {
+  font-size: 21px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.text-blue {
+  color: #0164AF;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-center {
+  text-align: center;
+}
+.text-default {
+  font-size: 16px;
+  line-height: 1.3;
+}
+.text-large {
+  font-size: 35px;
+  line-height: 1.1;
+}
+.text-left {
+  text-align: left;
+}
+.text-medium {
+  font-size: 21px;
+  line-height: 1.3;
+}
+.text-white {
+  color: #fff;
+}
+.text-xxlarge {
+  font-size: 33px;
+  line-height: 1.2;
+}
+@media screen and (min-width: 1024px) {
+  .text-xxlarge {
+    font-size: 52px;
+  }
+}
+
+.purple {
+  color: #5c0f40;
 }

@@ -1,6 +1,107 @@
+.bg {
+    &-ruby {
+        background-color: #D3145A;
+    }
+    &-grey {
+        background-color: #F1F2F2;
+    }
+    &-olive {
+        background-color: #BFCD2F;
+    }
+}
+
+.divider {
+    &__img {
+        background-size:cover;
+        background-position:center top;
+        height:inherit;
+    }
+}
+
+.inner {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.layout {
+    &__bg {
+        background-repeat:no-repeat;
+        background-size:cover;
+        height:100%;
+    }
+    &__one { //one column
+        // padding:50px 0;
+        // .inner {
+        //     padding:24px 20px;
+        // }
+        // @media screen and (min-width:1024px){
+        //     padding:65px 0;
+        // }
+    }
+    &__two { //two columns
+        .inner {
+            h3.title {
+                font-size:35px;
+                font-weight:bold;
+                margin-bottom:20px;
+            }
+            padding:35px 0;
+            @media screen and (min-width:1024px){
+                padding:55px 0;
+            }
+        }
+    }
+}
+// &.layout__one {
+//     padding-bottom:0;
+//     @media screen and (min-width:1024px){
+        
+//     }
+//     .c12 {
+//         padding:0;
+//     }
+// }
+
+.margin {
+    &-medium {
+        margin-bottom:21px;
+        &.top {
+            margin-bottom:0;
+            margin-top:21px;
+        }
+    }
+    &-none {
+        margin-bottom:0;
+    }
+    &-xlarge {
+        margin-bottom:42px;
+    }
+    &-50 {
+        margin-bottom:50px;
+    }
+}
+
 .max {
     margin:0 auto;
+    &-default {
+        max-width:824px;
+    }
+    &-550{
+        max-width:550px;
+    }
+    &-770{
+        max-width:770px;
+    }
+    &-1030{
+        max-width:1030px;
+    }
     &-1260{
         max-width:1260px;
+    }
+}
+
+.padding {
+    &-medium {
+        padding:21px 0;
     }
 }
