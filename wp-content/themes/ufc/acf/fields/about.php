@@ -109,8 +109,7 @@ if( function_exists('acf_add_local_field_group') ):
                 'label' => 'Headline',
                 'name' => 'cta_headline',
                 'type' => 'text',
-                'default_value' => 'The United Friends Impact',
-                'required' => 1,
+                'default_value' => 'Click below to view our 3-year strategic plan to empower foster youth.',
             ),
             array(
                 'key' => 'about2020__cta__button_url',
@@ -124,7 +123,6 @@ if( function_exists('acf_add_local_field_group') ):
                 'label' => 'Button Text',
                 'name' => 'cta_button_text',
                 'type' => 'text',
-                'instructions' => 'If empty, this button will not show.'
             ),
             array(
                 'key' => 'about2020__s2button_target',
