@@ -148,7 +148,7 @@
         <div class="row layout__one bg-gold about__cta">
             <div class="c12">
                 <div class="max-default inner text-center">
-                    <p class="text-bold text-medium text-white"><?php echo $cta__headline; ?></p>
+                    <p class="size5 bold white"><?php echo $cta__headline; ?></p>
                     <?php if($cta__button_text): ?>
                         <a href="<?php echo $cta__button_url; ?>" class="btn btn-blue margin-medium top" target="<?php echo $cta__button_target; ?>"><?php echo $cta__button_text; ?></a>
                     <?php endif; ?>
