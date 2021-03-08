@@ -644,6 +644,7 @@ button,
 .bg-dark-blue {	background-color: #0065b1;	}
 .bg-blue {	background-color: #19b0e6;	}
 .bg-green { background-color: #c2cc38;	}
+.bg-gold { background-color: #FFAD00; }
 .bg-light-green { background-color: #e1e6ac; }
 .bg-black { background-color: #2d2d2d;	}
 .bg-purple { background-color: #474794; }
@@ -2783,6 +2784,17 @@ label.home__icons--toggle:after {
 }
 #home__subhero.about2020 #home__subhero--content p {
 	margin-bottom:0;
+}
+
+.about__cta {
+	padding-top:32px;
+	padding-bottom:40px;
+}
+@media screen and (min-width:1024px){
+	.about__cta {
+		padding-top:76px;
+		padding-bottom:60px;
+	}
 }
 
 .about__video {

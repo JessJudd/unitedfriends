@@ -98,6 +98,42 @@ if( function_exists('acf_add_local_field_group') ):
                 ),
             ),
 
+            /* Section 1.1 - CTA with link */
+            array(
+                'key' => 'about2020__cta__link',
+                'label' => 'Section 1.1',
+                'type' => 'tab',
+            ),
+            array(
+                'key' => 'about2020__cta__headline',
+                'label' => 'Headline',
+                'name' => 'cta_headline',
+                'type' => 'text',
+                'default_value' => 'The United Friends Impact',
+                'required' => 1,
+            ),
+            array(
+                'key' => 'about2020__cta__button_url',
+                'label' => 'Button URL',
+                'name' => 'cta_button_url',
+                'type' => 'url',
+                'instructions' => 'If empty, this button will not show.'
+            ),
+            array(
+                'key' => 'about2020__cta__button_text',
+                'label' => 'Button Text',
+                'name' => 'cta_button_text',
+                'type' => 'text',
+                'instructions' => 'If empty, this button will not show.'
+            ),
+            array(
+                'key' => 'about2020__s2button_target',
+                'label' => 'Button Target',
+                'name' => 'cta_button_target',
+                'type' => 'true_false',
+                'message' => 'Open link in a new tab'
+            ),
+
             /* Section 2 - Video */
             array(
                 'key' => 'about2020__video__tab',

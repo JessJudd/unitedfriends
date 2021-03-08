@@ -18,6 +18,12 @@
 
     $s1__headline = get_field('s1_headline');
 
+    $cta__headline = get_field('cta_headline');
+    $cta__button_url = get_field('cta_button_url');
+    $cta__button_text = get_field('cta_button_text');
+    $get_cta__button_target = get_field('cta_button_target');
+    $cta__button_target = ($get_cta__button_target == 1) ? '_blank' : '';
+
     $video__headline = get_field('video_headline');
     $video__thumb = get_field('video_img');
     $video__url = get_field('video_embed');
@@ -133,6 +139,25 @@
         </div>
     <?php
     endif;
+    ?>
+
+    <?php
+        if( $cta__headline ) : 
+    ?>
+        
+        <div class="row layout__one bg-gold about__cta">
+            <div class="c12">
+                <div class="max-default inner text-center">
+                    <p class="text-bold text-medium text-white"><?php echo $cta__headline; ?></p>
+                    <?php if($cta__button_text): ?>
+                        <a href="<?php echo $cta__button_url; ?>" class="btn btn-blue margin-medium top" target="<?php echo $cta__button_target; ?>"><?php echo $cta__button_text; ?></a>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+
+    <?php    
+        endif;
     ?>
 
     <?php
