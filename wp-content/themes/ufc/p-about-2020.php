@@ -142,7 +142,7 @@
     ?>
 
     <?php
-        if( $cta__button_text ) : 
+        if( $cta__button_url ) : 
     ?>
         
         <div class="row layout__one bg-gold about__cta">
